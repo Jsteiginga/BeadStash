@@ -36,7 +36,8 @@ function processData(data) {
 }
 
 (function() {
-    $.get('http://localhost/school/workshops/ws-ajax-jquery/valuta.php', {'id': idBegin, 'idend': idEnd}, function(data) {
+    $.get('http://localhost/BeadStash/ws-ajax-jquery/valuta.php', function(data) {
+        // , {'id': idBegin, 'idend': idEnd}
         // Dit is een callback functie, die pas wordt uitgevoerd op het moment
         // dat er een reactie van de server terug komt.
         // Zolang er nog geen reactie terug is, gaan we gewoon verder met de rest
