@@ -1,4 +1,3 @@
-
 <?php
 $db_host = 'localhost';
 $db_user = 'root';
@@ -26,7 +25,7 @@ try {
             $dbs->execute([ ':id' => $id]);
         }
 //    else {
-//            $dbs = $dbh->prepare('SELECT * FROM currency WHERE id BETWEEN :id AND :idend');
+//            $dbs = $db->prepare('SELECT * FROM currency WHERE id BETWEEN :id AND :idend');
 //            $dbs->execute([
 //                ':id' => $id,
 //                ':idend' => $idEnd
