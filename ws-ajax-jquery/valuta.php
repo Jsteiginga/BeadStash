@@ -1,3 +1,4 @@
+
 <?php
 $db_host = 'localhost';
 $db_user = 'root';
@@ -21,17 +22,16 @@ try {
     $db = new PDO($dsn, $db_user, $db_pass);
 
     if ($id != null) {
-            $dbs = $db->prepare('SELECT * from currency WHERE id = :id');
-            $dbs->execute([ ':id' => $id]);
-        }
-//    else {
-//            $dbs = $db->prepare('SELECT * FROM currency WHERE id BETWEEN :id AND :idend');
-//            $dbs->execute([
-//                ':id' => $id,
-//                ':idend' => $idEnd
-//            ]);
-//        }
-     else {
+        // $dbs = $db->prepare('SELECT * from currency WHERE id = :id');
+        // $dbs->execute([ ':id' => $id]);
+        // } else {
+        $dbs = $db->prepare('SELECT * FROM currency WHERE id BETWEEN :id AND :idend');
+        $dbs->execute([
+            ':id' => $id,
+            ':idend' => $idEnd
+        ]);
+        // } */
+    } else {
         $dbs = $db->prepare('SELECT * from currency');
         $dbs->execute();
     }

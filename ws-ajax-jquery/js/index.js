@@ -6,21 +6,21 @@ function processData(data) {
     var output = '<table class="table table-striped table-bordered">';
 
     output +=   '<thead>' +
-                    '<tr>' +
-                        '<th style="text-align: center;">ID</th>' +
-                        '<th style="text-align: center;">Valuta</th>' +
-                        '<th style="text-align: center;">&euro;&nbsp;1,00 kost:</th>' +
-                    '</tr>' +
-                '</thead>' +
-                '<tbody>';
+        '<tr>' +
+        '<th style="text-align: center;">ID</th>' +
+        '<th style="text-align: center;">Valuta</th>' +
+        '<th style="text-align: center;">&euro;&nbsp;1,00 kost:</th>' +
+        '</tr>' +
+        '</thead>' +
+        '<tbody>';
 
-    $.each(jsonData, function(index, value) {
+    $.each(jsonData, function(hoi  , value) {
         console.log(value);
         output +=   '<tr>' +
-                        '<td style="text-align: center;">' + value.ID + '</td>' +
-                        '<td style="text-align: center;">' + value.CurrencyName + '</td>' +
-                        '<td style="text-align: right;">' + value.CurrencyValue + '</td>' +
-                    '</tr>';
+            '<td style="text-align: center;">' + value.ID + '</td>' +
+            '<td style="text-align: center;">' + value.CurrencyName + '</td>' +
+            '<td style="text-align: right;">' + value.CurrencyValue + '</td>' +
+            '</tr>';
 
     });
     // for (var record in jsonData) {
@@ -36,8 +36,7 @@ function processData(data) {
 }
 
 (function() {
-    $.get('http://localhost/BeadStash/ws-ajax-jquery/valuta.php', function(data) {
-        // , {'id': idBegin, 'idend': idEnd}
+    $.get('http://localhost/ws-ajax-jquery/valuta.php', {'id': idBegin, 'idend': idEnd}, function(data) {
         // Dit is een callback functie, die pas wordt uitgevoerd op het moment
         // dat er een reactie van de server terug komt.
         // Zolang er nog geen reactie terug is, gaan we gewoon verder met de rest
