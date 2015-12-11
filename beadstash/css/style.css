@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+#top{
+position: fixed;
+  top: 0;
+	width: auto;
+    height: auto;
+padding: 20px;
+}
+#valuta-tabel{
+margin-top: 92px;
+}
+.left-blok {
+    margin-right: 10px;
+    width: 45%;
+    padding: 0;
+    min-height: 500px;
+}
+
+.right-blok {
+    width: 45%;
+    margin-left: 10px;
+    padding: 0;
+    min-height: 500px;
+}
+.kraal_plaatjes{
+height: 100px;
+width: 100xp;
+}
+#keuze{
+color: black;
+font-size: 14px;
+text-align: right;
+}
